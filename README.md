@@ -1,5 +1,4 @@
-# grammar-aided-keyword-extractor-russian
-A grammar-aided keyword extractor for Russian
+# A grammar-aided keyword extractor for Russian
 
 ## 1. Introduction
 The extraction algorithm relies on what the user defines based on empirical, methodological or theoretical evidence as suitable grammatical patterns to find keywords. Patterns are indicated as a sequence of part-of-speech (POS) tags in a grammar.
