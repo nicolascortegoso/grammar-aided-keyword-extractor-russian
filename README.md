@@ -60,10 +60,11 @@ Each sequence of tags must be expressed, on the same line, in the intended order
 PRED ADJF_sing_loct NOUN_sing_loct
 
 Example grammar:
-
+```
 NOUN_sing_nomn
 ADJF_sing_nomn NOUN_sing_nomn
 PRED ADJF_sing_loct NOUN_sing_loct NOUN_sing_gent
+```
 
 Where the first line defines as possible candidate for a keyword a singular noun in the nominative case; the second a singular noun in the nominative case preceded by and adjective with the same number and case; and the third line a singular adjective and a noun in the locative case, introduced by a preposition and followed by a singular noun in the negative case.
 
@@ -82,18 +83,14 @@ c (t) is the number of tokens that the text contains. It's just a normalization 
 The script requires python3 and pymorphy2 to be installed. The  disambiguation process after the morphological parsing is based on the probabilities in the file “transition_probabilities.json”, so this is also a requirement. The user must provide the algorithm with the file that contains the grammar, written according to the formatting rules described in section 2.
 
 Example code:
-
+```
 from kw_extractor import POStagger, Keywords #1
-
 tagger = POStagger('trainstion_probabilities.json') #2
 keywords = Keywords('rules.txt') #3
-
 filename = 'text.txt' #4
-
 tagged_text, token_count = tagger.parse(filename) #5
 keywords.extract(tagged_text, token_count, 0.01, 0.4) #6
-
-
+```
 where:
 #1 imports the classes “POStagger” and “Keywords” from the file “kw_extractor.py”;
 #2 the object “tagger” is initialized from the class “POStagger” with the file that contains the transition probabilities as argument;
