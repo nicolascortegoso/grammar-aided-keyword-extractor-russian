@@ -1,0 +1,18 @@
+#Униграммы
+NOUN_sing_nomn
+NOUN_plur_nomn
+ADJF_sing_nomn
+
+#Биграммы
+ADJF_sing_nomn NOUN_sing_nomn
+ADJF_plur_nomn NOUN_plur_nomn
+NOUN_sing_nomn NOUN_plur_gent
+NOUN_plur_nomn NOUN_plur_gent
+
+#Триграммы
+ADJF_sing_nomn ADJF_sing_nomn NOUN_sing_nomn
+ADJF_plur_nomn NOUN_plur_nomn NOUN_plur_gent
+NOUN_sing_nomn ADJF_sing_gent NOUN_sing_gent
+NOUN_plur_nomn ADJF_sing_gent NOUN_sing_gent
+NOUN_sing_nomn ADJF_plur_gent NOUN_plur_gent
+ADJF_sing_nomn NOUN_sing_nomn NOUN_plur_gent
