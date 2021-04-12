@@ -144,7 +144,6 @@ class Keywords(object):
 						weighted_chunks[keywords_in_text[i][j]] += lemmas_count[element]
 		for k,v in weighted_chunks.items():
 			n_keywords_in_chunk = len(k.split(' '))
-			#weighted_chunks[k] = (v / token_count) * (n_keywords_in_chunk ** weight_for_chunks)
 			weighted_chunks[k] = (v * (n_keywords_in_chunk ** weight_for_chunks)) / token_count
 
 		new_dict = {}
