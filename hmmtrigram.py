@@ -81,7 +81,6 @@ class MostProbableTagSequence:
 				for token in tagged_tokens:
 					pymorphy2_most_probable.append(token[0][0])
 				return pymorphy2_most_probable
-				#error_in_desambiguation_process = True
 
 		desambiguated_tag_list_reversed = desambiguated_tag_list[::-1][2:]
 		desambiguated_sentence = []
